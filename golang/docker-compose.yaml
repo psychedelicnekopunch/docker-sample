@@ -1,0 +1,8 @@
+services:
+    golang:
+        build:
+            context: .
+        volumes:
+         - .:/var/www/html/prod
+        # コンテナを起動し続けるための項目
+        tty: true
