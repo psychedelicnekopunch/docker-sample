@@ -1,0 +1,10 @@
+
+version: "3"
+
+services:
+    nginx:
+        build:
+            context: .
+        # volumes を指定すると RUN chmod 744 bin/sample がおそらく上書きされる
+        # volumes:
+        #  - .:/var/www/html
