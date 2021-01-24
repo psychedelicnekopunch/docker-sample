@@ -1,12 +1,9 @@
 #!/bin/sh
 
-/etc/init.d/nginx start
-# go mod init github.com/psychedelicnekopunch/docker-sample
-
-# ls
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/go
 export PATH=$PATH:$GOPATH/bin
-# go version
+
+/etc/init.d/nginx start
 go mod tidy
 realize s
