@@ -1,0 +1,30 @@
+
+version: "3"
+
+services:
+    db:
+        image: mysql:8
+        restart: always
+        environment:
+            # volumes を指定した場合、
+            # イメージやコンテナを削除してもアカウント情報は
+            # volumes のディレクトリで維持されるので MYSQL_ROOT_PASSWORD を後から変更しても
+            # 変更後のパスワードでログインができない。
+            # コンテナにログインして mysql コマンドでパスワードを変更しても反映されない。
+            # パスワードを変更した場合はバックアップをとって volumes のディレクトリ、イメージ、コンテナを削除し、
+            # 再度 dockker-compose up を行う。
+            MYSQL_ROOT_PASSWORD: password
+            # MYSQL_DATABASE: test
+            # MYSQL_USER: guest
+            # MYSQL_PASSWORD: password
+            TZ: 'Asia/Tokyo'
+        volumes:
+         - ./../mysql:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin:latest
+        restart: always
+        ports:
+         - 8080:80
+        environment:
+         - PMA_ARBITRARY=1
