@@ -35,6 +35,15 @@ fc961249302f   nginx_nginx   "/docker-entrypoint.…"   8 seconds ago   Exited (
 $ docker rm nginx_nginx_1
 ```
 
+
+#### remove all container
+
+```bash
+$ cd /path/to/docker-sample
+$ bin/rm_all_container
+```
+
+
 ### IMAGES
 
 ```bash
@@ -46,4 +55,12 @@ nginx         1         f6d0b4767a6c   9 days ago           133MB
 # docker rmi [REPOSITORY or IMAGE ID] -f
 # -f force 強制的に
 $ docker rmi nginx_nginx -f
+```
+
+
+#### remove <none> images
+
+```bash
+$ cd /path/to/docker-sample
+$ bin/rmi_none
 ```

@@ -1,5 +1,6 @@
 .DS_Store
 
 golang-gin/main
+mysql/
 
 !.gitkeep
