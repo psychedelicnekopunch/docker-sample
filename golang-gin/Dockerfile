@@ -1,7 +1,9 @@
+# Golag
 FROM golang:1 as golang
-# RUN go mod init github.com/psychedelicnekopunch/docker-sample
 RUN go get -u github.com/tockins/realize
 
+
+# Nginx
 FROM nginx:1
 
 WORKDIR /var/www/html
