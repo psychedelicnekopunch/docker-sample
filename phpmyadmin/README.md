@@ -1,6 +1,6 @@
 
 ### log in
 
-hostname: db
-username: root
-password: password
+* hostname: db
+* username: root
+* password: password
