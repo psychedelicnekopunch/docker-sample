@@ -1,4 +1,5 @@
-FROM nginx:1
+# https://hub.docker.com/_/nginx
+FROM nginx:alpine
 
 WORKDIR /var/www/html
 

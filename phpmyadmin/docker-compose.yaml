@@ -1,3 +1,4 @@
+# https://hub.docker.com/_/phpmyadmin
 
 version: "3"
 
@@ -22,7 +23,7 @@ services:
          - ./../mysql:/var/lib/mysql
 
     phpmyadmin:
-        image: phpmyadmin:latest
+        image: phpmyadmin:fpm-alpine
         restart: always
         ports:
          - 8080:80

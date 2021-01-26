@@ -1,10 +1,12 @@
 # Golag
+# https://hub.docker.com/_/golang
 FROM golang:1 as golang
 RUN go get -u github.com/tockins/realize
 
 
 # Nginx
-FROM nginx:1
+# https://hub.docker.com/_/nginx
+FROM nginx:alpine
 
 WORKDIR /var/www/html
 

@@ -1,3 +1,4 @@
+# https://hub.docker.com/_/golang
 FROM golang:1
 RUN mkdir -p /var/www/html/prod
 COPY . /var/www/html/prod
