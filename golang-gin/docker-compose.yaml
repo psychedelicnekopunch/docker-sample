@@ -2,10 +2,12 @@
 version: "3"
 
 services:
-    gin:
+    app:
         build:
             context: .
         volumes:
-         - .:/var/www/html
+         - ./app:/var/www/html
+         - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
         ports:
          - "8080:80"
+        # tty: true
