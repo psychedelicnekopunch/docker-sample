@@ -1,6 +1,8 @@
 
 ## Getting Started
 
+Image for service app was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`
+
 ```bash
 $ cd /path/to/docker-sample/some-sample-dir
 $ docker-compose up
@@ -9,7 +11,7 @@ ctl + c で終了
 ```
 
 
-## access
+## Access
 
 http://localhost:8080/
 
