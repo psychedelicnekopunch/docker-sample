@@ -1,7 +1,7 @@
 # https://hub.docker.com/_/nginx
 
 # FROM nginx:latest
-FROM nginx:alpine
+FROM nginx:1
 # RUN cd /usr/share/nginx/html
 # RUN mkdir prod
 # RUN mkdir -p /usr/share/nginx/html/prod
