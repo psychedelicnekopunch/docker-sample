@@ -23,7 +23,7 @@ services:
          - ./../mysql:/var/lib/mysql
 
     phpmyadmin:
-        image: phpmyadmin:fpm-alpine
+        image: phpmyadmin:5
         restart: always
         ports:
          - 8080:80
