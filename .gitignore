@@ -2,5 +2,6 @@
 
 golang-gin/main
 mysql/
+vendor
 
 !.gitkeep
