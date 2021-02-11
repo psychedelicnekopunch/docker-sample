@@ -8,4 +8,4 @@ services:
         # volumes を指定すると RUN chmod 744 bin/sample が上書きされるので
         # Dockerfile で RUN chmod 744 bin/sample しても意味がない
         # volumes:
-        #  - .:/var/www/html
+        #     - .:/var/www/html

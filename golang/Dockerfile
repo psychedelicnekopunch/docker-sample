@@ -1,7 +1,9 @@
 # https://hub.docker.com/_/golang
 FROM golang:1
-RUN mkdir -p /var/www/html/prod
-COPY . /var/www/html/prod
+
+WORKDIR /var/www/html
+
+COPY ./app /var/www/html
 
 RUN go version
-RUN go run /var/www/html/prod/main.go
+RUN go run main.go
