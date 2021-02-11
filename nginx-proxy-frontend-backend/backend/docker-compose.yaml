@@ -1,0 +1,18 @@
+
+version: "3"
+
+services:
+    app:
+        build:
+            context: .
+        container_name: docker_sample_api
+        volumes:
+            - ./app:/var/www/html
+        networks:
+            - docker-sample-network
+        environment:
+            - VIRTUAL_HOST=api.docker.sample
+
+networks:
+    docker-sample-network:
+        name: docker_sample_network

@@ -1,0 +1,17 @@
+
+version: "3"
+
+services:
+    ticketvillage:
+        container_name: nginx-proxy
+        image: jwilder/nginx-proxy
+        ports:
+            - 80:80
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+        networks:
+            - docker-sample-network
+
+networks:
+    docker-sample-network:
+        name: docker_sample_network
