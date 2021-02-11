@@ -6,14 +6,22 @@ $ sudo vi /etc/hosts
 ```
 
 
-### /etc/hosts
+#### /etc/hosts
 
 ```bash
 127.0.0.1 docker.sample api.docker.sample
 ```
 
 
-### docker-compose up
+#### composer
+
+```bash
+$ cd /path/to/docker-sample/nginx-proxy-frontend-backend/frontend
+$ bin/composer install
+```
+
+
+#### docker-compose up
 
 ```bash
 # nginx-proxy
@@ -32,12 +40,12 @@ $ docker-compose up
 
 ## URL
 
-### access
+#### access
 
 * http://docker.sample (frontend)
 * http://api.docker.sample (backend)
 
 
-### access to api.docker.sample from frontend via cURL
+#### access to api.docker.sample from frontend via cURL
 
 * http://docker_sample_api
