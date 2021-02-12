@@ -1,8 +1,9 @@
 
 version: "3"
 
-# app と php 両方に下記 volumes を記述しないと
-# php ファイル以外がうまく同期されなくなる
+# app と php それぞれに volumes: に「- ./app:/var/www/html」 してるのは、
+# app だけに記述すると PHP が動かず、
+# php だけに記述すると PHP 以外のファイルを更新するとうまく同期されなかったため。
 #
 # volumes:
 #     - ./app:/var/www/html
