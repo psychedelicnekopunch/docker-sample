@@ -2,7 +2,7 @@
 version: "3"
 
 services:
-    ticketvillage:
+    app:
         container_name: nginx-proxy
         image: jwilder/nginx-proxy
         ports:
