@@ -4,4 +4,6 @@ golang-gin/main
 mysql/
 vendor
 
+phpmyadmin/sql/*
+
 !.gitkeep

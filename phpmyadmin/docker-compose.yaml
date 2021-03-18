@@ -21,6 +21,7 @@ services:
             TZ: 'Asia/Tokyo'
         volumes:
             - ./../mysql:/var/lib/mysql
+            - ./sql:/sql
 
     phpmyadmin:
         image: phpmyadmin:5
