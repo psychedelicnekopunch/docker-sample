@@ -3,32 +3,34 @@
 version: "3"
 
 services:
+    wordpress:
+        build:
+            context: .
+        restart: always
+        volumes:
+            - ./wordpress:/var/www/html
+        ports:
+            - 8080:80
+        depends_on:
+            - mysql
+
     mysql:
         image: mysql:8
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: password
-            MYSQL_DATABASE: wordpress
-            MYSQL_USER: wordpress
-            MYSQL_PASSWORD: wordpress
             TZ: 'Asia/Tokyo'
         volumes:
             - ./../mysql:/var/lib/mysql
+            - ./sql:/sql
 
-    wordpress:
-        image: wordpress:latest
-        # image: wordpress:php8.0-fpm-alpine
+    phpmyadmin:
+        image: phpmyadmin:5
         restart: always
         ports:
-            - 8080:80
+            - 8081:80
         environment:
-            WORDPRESS_DB_HOST: mysql
-            WORDPRESS_DB_USER: root
-            WORDPRESS_DB_PASSWORD: password
-            WORDPRESS_DB_NAME: wordpress
-        volumes:
-            - ./wordpress:/var/www/html
-
-# volumes:
-#     wordpress:
-#     db:
+            # - PMA_ARBITRARY=1
+            - PMA_HOST=mysql
+            - PMA_USER=root
+            - PMA_PASSWORD=password
