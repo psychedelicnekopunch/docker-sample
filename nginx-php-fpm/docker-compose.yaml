@@ -8,10 +8,27 @@ version: "3"
 # volumes:
 #     - ./app:/var/www/html
 #
+# services:
+#     app:
+#         build:
+#             context: .
+#         volumes:
+#             - ./app:/var/www/html
+#             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+#         ports:
+#             # http://localhost:8080/
+#             - "8080:80"
+#         depends_on:
+#             - php
+#     php:
+#         # https://hub.docker.com/_/php
+#         image: php:fpm
+#         volumes:
+#             - ./app:/var/www/html
+
 services:
     app:
-        build:
-            context: .
+        image: nginx:1
         volumes:
             - ./app:/var/www/html
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
@@ -22,6 +39,8 @@ services:
             - php
     php:
         # https://hub.docker.com/_/php
-        image: php:fpm
+        # image: php:fpm
+        build:
+            context: .
         volumes:
             - ./app:/var/www/html
