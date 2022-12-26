@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# 最新バージョンを確認
+amazon-linux-extras | grep redis
+# redis6 available
+amazon-linux-extras install -y redis6
+redis-server -v
+cd /app

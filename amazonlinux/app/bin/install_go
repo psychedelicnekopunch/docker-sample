@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# 最新バージョンの Go は
+# https://go.dev/dl/ より確認する
+
+cd /usr/local
+yum -y install wget tar
+wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+rm -rf go1.19.4.linux-amd64.tar.gz
+cd /app
