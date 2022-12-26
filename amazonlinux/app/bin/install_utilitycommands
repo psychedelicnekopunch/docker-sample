@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# CentOS7, AmazonLinux2
+# top, ps, kill などが使えるようになる。
+yum -y install procps-ng
