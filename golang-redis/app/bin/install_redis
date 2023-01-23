@@ -3,6 +3,7 @@
 # 最新バージョンを確認
 amazon-linux-extras | grep redis
 # redis6 available
+# sudo amazon-linux-extras install -y redis6
 amazon-linux-extras install -y redis6
 redis-server -v
 cd /app

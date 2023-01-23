@@ -2,4 +2,5 @@
 
 # CentOS7, AmazonLinux2
 # top, ps, kill などが使えるようになる。
+# sudo yum -y install procps-ng
 yum -y install procps-ng

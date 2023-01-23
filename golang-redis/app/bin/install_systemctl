@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# sudo yum install systemd -y
+yum install systemd -y
