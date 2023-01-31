@@ -6,4 +6,7 @@ vendor
 
 phpmyadmin/sql/*
 
+air.log
+golang-air/app/main
+
 !.gitkeep
