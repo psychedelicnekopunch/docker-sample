@@ -3,10 +3,20 @@ version: "3"
 
 services:
     app:
-        build:
-            context: .
+        depends_on:
+            - go
+        image: nginx:1
         volumes:
             - ./app:/var/www/html
-        # コンテナを起動し続けるための項目
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        ports:
+            - 8080:80
         tty: true
+        working_dir: /var/www/html
+    go:
+        build:
+            context: .
+            dockerfile: ./go/Dockerfile
+        volumes:
+            - ./app:/var/www/html
         working_dir: /var/www/html

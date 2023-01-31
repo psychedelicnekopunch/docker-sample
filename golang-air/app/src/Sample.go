@@ -7,10 +7,9 @@ package src
 // )
 
 
-type Sample struct {
-}
+type Sample struct {}
 
 
 func (s *Sample) Test() string {
-	return "test in Sample.go\n"
+	return "\n===============\ntest in Sample.go\n===============\n\n"
 }
